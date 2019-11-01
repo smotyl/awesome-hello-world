@@ -1,0 +1,119 @@
+html, body { 
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient( 104.9deg,  rgba(255,95,162,1) 2.3%, rgba(254,201,154,1) 92.7% );
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.item h1 {
+    font-size: 100px;
+}
+
+span {
+    font-size: 100px;
+    animation: spin 1s linear infinite;
+}
+
+.animatedWorlds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.animatedWorlds li {
+    position: absolute;
+    display: list-item;
+    list-style: none;
+    float: left;
+    bottom: -150px;
+  
+    animation: popWorlds 4s ease-in-out infinite;
+}
+
+.animatedWorlds li:nth-child(1) {
+    left: 86%;
+    font-size: 100px;
+    animation-delay: 0s;
+}
+  
+.animatedWorlds li:nth-child(2) {
+    left: 12%;
+    font-size: 50px;
+    animation-delay: 1.2s;
+    animation-duration: 10s;
+}
+  
+.animatedWorlds li:nth-child(3) {
+    left: 70%;
+    font-size: 80px;
+    animation-duration: 20s;
+}
+  
+.animatedWorlds li:nth-child(4) {
+    left: 70%;
+    font-size: 120px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+  
+.animatedWorlds li:nth-child(5) {
+    left: 65%;
+    font-size: 60px;
+    animation-delay: 5.5s;
+}
+  
+.animatedWorlds li:nth-child(6) {
+    left: 12%;
+    font-size: 20px;
+    animation-delay: 20s;
+    animation-duration: 10s;
+}
+  
+.animatedWorlds li:nth-child(7) {
+    left: 22%;
+    font-size: 50px;
+    animation-delay: 8s;
+    animation-duration: 30s;
+    z-index: 30;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes popWorlds {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(360deg);
+      opacity: 0;
+    }
+}
